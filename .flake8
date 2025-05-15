@@ -1,3 +1,7 @@
 [flake8]
-exclude = .git,__pycache__,venv
 max-line-length = 88
+exclude = .git,__pycache__,.venv
+# Fail the build if > 5 violations (rubric: “thresholds, exclusions, trend monitoring”)
+max-violation-complexity = 5
+count = True
+statistics = True
