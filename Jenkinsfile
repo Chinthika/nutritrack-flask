@@ -10,14 +10,13 @@ pipeline {
             steps {
                 echo "Installing dependencies"
                 sh 'pip install --break-system-packages -r requirements.txt'
-
             }
         }
 
         stage('Test') {
             steps {
                 echo "Running tests"
-                sh 'pytest tests'
+                sh '~/.local/bin/pytest tests'
             }
         }
 
