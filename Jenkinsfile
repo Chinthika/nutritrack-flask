@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Running tests"
-                sh '~/.local/bin/pytest tests'
+                sh 'PYTHONPATH=.:$PYTHONPATH /var/jenkins_home/.local/bin/pytest tests'
             }
         }
 
