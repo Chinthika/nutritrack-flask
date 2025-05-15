@@ -23,7 +23,7 @@ pipeline {
         stage('Code Quality') {
             steps {
                 echo "Running flake8"
-                sh 'flake8 app'
+                sh '~/.local/bin/flake8 app'
             }
         }
 
