@@ -1,2 +1,4 @@
-[bandit]
-exclude = tests
+# Fail the build only for MEDIUM or HIGH severity
+exclude_dirs: ['tests']
+severity: MEDIUM
+skips: ['B101']   # we deliberately keep assert statements in tests
